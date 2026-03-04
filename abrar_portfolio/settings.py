@@ -22,7 +22,7 @@ SECRET_KEY = os.environ.get(
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['.onrender.com']
+ALLOWED_HOSTS = ['*', 'portfolio-k2kf.onrender.com']
 
 
 # --------------------------------------------------

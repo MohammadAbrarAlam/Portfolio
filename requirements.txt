@@ -1,7 +1,6 @@
 Django
 gunicorn
 whitenoise
-opencv-python-headless
 matplotlib
 pandas
 requests
