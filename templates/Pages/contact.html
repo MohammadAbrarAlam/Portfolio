@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact | Abrar Portfolio{% endblock title %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Get In Touch</h2>
+        <p class="text-muted" style="color:white;">
+            Have a project idea or opportunity? Let’s connect and build something amazing.
+        </p>
+        <hr class="w-25 mx-auto">
+    </div>
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+
+            <div class="card shadow-sm p-4 contact-card">
+
+                <form method="POST">
+                    {% csrf_token %}
+
+                    <!-- Name -->
+                    <div class="mb-3 input-group">
+                        <span class="input-group-text">
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+                        <input type="text"
+                               name="name"
+                               class="form-control"
+                               placeholder="Your Name"
+                               required>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="mb-3 input-group">
+                        <span class="input-group-text">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+                        <input type="email"
+                               name="email"
+                               class="form-control"
+                               placeholder="Your Email"
+                               required>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="mb-3 input-group">
+                        <span class="input-group-text">
+                            <i class="fa-solid fa-comment"></i>
+                        </span>
+                        <textarea name="message"
+                                  class="form-control"
+                                  rows="4"
+                                  placeholder="Your Message"
+                                  required></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit"
+                            class="btn btn-primary w-100">
+                        <i class="fa-solid fa-paper-plane me-1"></i>
+                        Send Message
+                    </button>
+
+                </form>
+
+                <!-- Social Links -->
+                <div class="text-center mt-4">
+                    <a href="https://linkedin.com/in/abraralam2004"
+                       target="_blank"
+                       class="text-dark me-3 fs-5">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+
+                    <a href="https://github.com/MohammadAbrarAlam"
+                       target="_blank"
+                       class="text-dark me-3 fs-5">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a href="https://abrarcs2004.app.n8n.cloud/webhook/61ca8691-9729-4592-ac74-6af825015aa2/chat"
+                       class="text-dark fs-5">
+                        <i class="fa-solid fa-globe"></i>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

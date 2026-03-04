@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block title %}Skills | Abrar Portfolio{% endblock %}
+
+{% block content %}
+
+<div class="container py-4">
+
+    <!-- Page Heading -->
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">My Skills</h2>
+        <p class="text-muted">
+            Technologies and tools I use to build intelligent and scalable applications.
+        </p>
+        <hr class="w-25 mx-auto">
+    </div>
+
+    <div class="row g-4">
+
+        <!-- Programming Skills -->
+        <div class="col-md-6">
+            <div class="card shadow-sm p-4 h-100 skill-card">
+                <h5 class="mb-4">
+                    <i class="fa-solid fa-code text-primary me-2"></i>
+                    Programming
+                </h5>
+
+                <label class="fw-semibold">Python</label>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-primary" style="width: 90%">90%</div>
+                </div>
+
+                <label class="fw-semibold">JavaScript</label>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-info" style="width: 75%">75%</div>
+                </div>
+
+                <label class="fw-semibold">SQL / MySQL</label>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-success" style="width: 80%">80%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Frameworks -->
+        <div class="col-md-6">
+            <div class="card shadow-sm p-4 h-100 skill-card">
+                <h5 class="mb-4">
+                    <i class="fa-solid fa-gears text-success me-2"></i>
+                    Frameworks & Tools
+                </h5>
+
+                <label class="fw-semibold">Django</label>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-success" style="width: 85%">85%</div>
+                </div>
+
+                <label class="fw-semibold">Bootstrap</label>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-info" style="width: 80%">80%</div>
+                </div>
+
+                <label class="fw-semibold">OpenCV</label>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-warning text-dark" style="width: 70%">70%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI & Data Skills -->
+        <div class="col-12">
+            <div class="card shadow-sm p-4 skill-card">
+                <h5 class="mb-4">
+                    <i class="fa-solid fa-robot text-danger me-2"></i>
+                    AI & Data Skills
+                </h5>
+
+                <div>
+                    <span class="badge bg-primary m-1 p-2">Machine Learning</span>
+                    <span class="badge bg-secondary m-1 p-2">Computer Vision</span>
+                    <span class="badge bg-success m-1 p-2">Data Analysis</span>
+                    <span class="badge bg-danger m-1 p-2">Automation</span>
+                    <span class="badge bg-dark m-1 p-2">REST APIs</span>
+                    <span class="badge bg-warning text-dark m-1 p-2">Git & GitHub</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

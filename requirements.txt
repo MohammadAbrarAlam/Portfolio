@@ -1,0 +1,7 @@
+Django
+matplotlib
+pandas
+opencv-python
+requests
+gunicorn
+pillow

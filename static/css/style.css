@@ -1,0 +1,111 @@
+/* ================= BODY ================= */
+
+body {
+    background: #97a8d5;
+    /* Your color */
+    color: white;
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+/* Page Fade Animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ================= LINKS ================= */
+
+a {
+    text-decoration: none;
+    /* Your style */
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #00f5a0 !important;
+    transform: scale(1.08);
+}
+
+
+/* ================= CARD ================= */
+
+.card {
+    border-radius: 15px;
+    /* Your radius */
+    border: none;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ================= CHATBOX ================= */
+
+#chatbox {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: black;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease;
+}
+
+#chatbox:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00f5a0;
+}
+
+
+/* ================= FOOTER ICONS ================= */
+
+.icons a {
+    display: inline-block;
+    transition: all 0.4s ease;
+}
+
+.icons a:hover {
+    transform: translateY(-5px) rotate(5deg);
+    color: #00f5a0 !important;
+    text-shadow: 0 0 12px #00f5a0;
+}
+
+
+/* ================= BUTTON EFFECT ================= */
+
+.btn-custom {
+    background: linear-gradient(45deg, #00f5a0, #00d9f5);
+    border: none;
+    color: white;
+    transition: 0.4s ease;
+}
+
+.btn-custom:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 20px rgba(0, 245, 160, 0.6);
+}
+
+
+/* ================= GRADIENT TEXT ================= */
+
+.gradient-text {
+    background: linear-gradient(45deg, #00f5a0, #00d9f5, #a100ff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
