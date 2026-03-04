@@ -1,1 +1,1 @@
-web: gunicorn config.wsgi
+web: gunicorn abrar_portfolio.wsgi:application
