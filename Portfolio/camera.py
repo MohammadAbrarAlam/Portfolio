@@ -1,5 +1,6 @@
 import cv2
 import threading
+import os
 
 def start_camera():
     cam = cv2.VideoCapture(0)
@@ -16,6 +17,10 @@ def start_camera():
 
     cam.release()
     cv2.destroyAllWindows()
-
+    
 def run_camera():
-    threading.Thread(target=start_camera, daemon=True).start()
+    if os.environ.get("RENDER") is None:
+        import threading
+        threading.Thread(target=start_camera, daemon=True).start()
+    else:
+        print("Camera skipped on server deployment.")
