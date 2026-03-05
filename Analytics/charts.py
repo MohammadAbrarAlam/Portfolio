@@ -1,3 +1,6 @@
+import matplotlib
+matplotlib.use('Agg')   # server environment ke liye important
+
 import matplotlib.pyplot as plt
 import os
 from django.conf import settings
@@ -17,4 +20,5 @@ def create_chart():
 
     plt.savefig(path)
     plt.close()
+
     return "charts/skills.png"
