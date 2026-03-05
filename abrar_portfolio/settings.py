@@ -37,9 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Custom Apps (Make sure folder names match exactly)
-    'portfolio',
-    'analytics',
-    'chatbot',
+    'Portfolio',
+    'Analytics',
+    'Chatbot',
 ]
 
 
