@@ -10,7 +10,11 @@ def create_chart():
     plt.figure()
     plt.bar(skills, level)
 
-    path = os.path.join(settings.STATICFILES_DIRS[0],"charts/skills.png")
+    chart_dir = os.path.join(settings.BASE_DIR, "static", "charts")
+    os.makedirs(chart_dir, exist_ok=True)
+
+    path = os.path.join(chart_dir, "skills.png")
+
     plt.savefig(path)
     plt.close()
     return "charts/skills.png"
