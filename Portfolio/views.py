@@ -8,7 +8,6 @@ def home(request):
 
 
 def projects(request):
-    # Fetch projects (latest first)
     projects_list = Project.objects.all().order_by("-id")
 
     context = {
@@ -24,3 +23,7 @@ def skills(request):
 
 def contact(request):
     return render(request, "Pages/contact.html")
+
+
+def dashboard(request):
+    return render(request, "Pages/dashboard.html")
