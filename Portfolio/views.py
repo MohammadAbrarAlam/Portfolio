@@ -25,5 +25,3 @@ def contact(request):
     return render(request, "Pages/contact.html")
 
 
-def dashboard(request):
-    return render(request, "Pages/dashboard.html")
