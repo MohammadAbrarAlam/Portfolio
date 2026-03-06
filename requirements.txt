@@ -2,5 +2,4 @@ Django
 gunicorn
 whitenoise
 matplotlib
-pandas
 dj-database-url
