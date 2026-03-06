@@ -22,7 +22,7 @@ SECRET_KEY = os.environ.get(
     "django-insecure-temp-key-change-in-production"
 )
 
-# Production safe DEBUG
+# Local = True | Render = False
 DEBUG = os.environ.get("RENDER") is None
 
 ALLOWED_HOSTS = [
@@ -35,6 +35,8 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+
 # --------------------------------------------------
 # APPLICATIONS
 # --------------------------------------------------
@@ -108,10 +110,9 @@ WSGI_APPLICATION = 'abrar_portfolio.wsgi.application'
 # DATABASE
 # --------------------------------------------------
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}"
+    )
 }
 
 
@@ -165,9 +166,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # --------------------------------------------------
-# RENDER SETTINGS
+# PORT (Render)
 # --------------------------------------------------
 PORT = os.environ.get("PORT", "10000")
-
-if os.environ.get("RENDER"):
-    DEBUG = True
