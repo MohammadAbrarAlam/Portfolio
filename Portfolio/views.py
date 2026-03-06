@@ -1,7 +1,5 @@
 from django.shortcuts import render
 from .models import Project
-import requests
-
 
 def home(request):
     return render(request, "Pages/home.html")

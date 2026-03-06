@@ -3,6 +3,4 @@ gunicorn
 whitenoise
 matplotlib
 pandas
-requests
 dj-database-url
-pillow

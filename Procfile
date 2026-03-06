@@ -1,1 +1,1 @@
-web: gunicorn abrar_portfolio.wsgi:application --bind 0.0.0.0:$PORT
+web: gunicorn abrar_portfolio.wsgi:application --workers 3 --timeout 120
