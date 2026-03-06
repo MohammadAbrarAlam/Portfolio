@@ -22,7 +22,8 @@ SECRET_KEY = os.environ.get(
     "django-insecure-temp-key-change-in-production"
 )
 
-DEBUG = False
+# Production safe DEBUG
+DEBUG = os.environ.get("RENDER") is None
 
 ALLOWED_HOSTS = [
     '*',
@@ -34,8 +35,6 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-
 # --------------------------------------------------
 # APPLICATIONS
 # --------------------------------------------------
@@ -171,4 +170,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 PORT = os.environ.get("PORT", "10000")
 
 if os.environ.get("RENDER"):
-    DEBUG = False
+    DEBUG = True

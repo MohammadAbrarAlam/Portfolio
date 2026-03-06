@@ -24,4 +24,7 @@ urlpatterns = [
     path('', include('Portfolio.urls')),
     path('dashboard/', include('Analytics.urls')),
     path('chatbot/', include('Chatbot.urls')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
