@@ -4,3 +4,4 @@ whitenoise
 matplotlib
 pandas
 requests
+dj_database_url
